@@ -8,9 +8,18 @@ import math
 # print(a.iloc[:,4])
 # import matplotlib.pyplot as plt
 
-x = [1, 2, 3, 4, 5]
-y = [10, 20, 25, 30, 40]
+# x = [1, 2, 3, 4, 5]
+# y = [10, 20, 25, 30, 40]
 
-plt.plot(x, y)
-plt.xticks(rotation=45)  # 旋转x轴的刻度标签45度
-plt.show()
+# plt.plot(x, y)
+# plt.xticks(rotation=45)  # 旋转x轴的刻度标签45度
+# plt.show()
+
+
+a=np.random.rand(2,4,3,5)
+b=a.shape
+c=a.max(axis=1)
+d=c.shape
+print(b,'\n',d,'\n',a,'\n','new:','\n',c)
+
+
