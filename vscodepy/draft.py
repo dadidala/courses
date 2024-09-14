@@ -22,4 +22,5 @@ c=a.max(axis=1)
 d=c.shape
 print(b,'\n',d,'\n',a,'\n','new:','\n',c)
 
-
+f= 1
+print(f)
