@@ -1,26 +1,17 @@
-import numpy as np
-import pandas as pd 
-import matplotlib.pyplot as plt
-import math
+import pandas as pd
+import seaborn as sns
+import matplotlib. pyplot as plt
 
-
-# a = pd.read_excel(r"C:\Users\周俊杰\Desktop\SXJM\A题\附件\c1.xlsx")
-# print(a.iloc[:,4])
-# import matplotlib.pyplot as plt
-
-# x = [1, 2, 3, 4, 5]
-# y = [10, 20, 25, 30, 40]
-
-# plt.plot(x, y)
-# plt.xticks(rotation=45)  # 旋转x轴的刻度标签45度
-# plt.show()
-
-
-a=np.random.rand(2,4,3,5)
-b=a.shape
-c=a.max(axis=1)
-d=c.shape
-print(b,'\n',d,'\n',a,'\n','new:','\n',c)
-
-f= 1
-print(f)
+plt. rcParams ['font.sans-serif'] = ['SimHei']
+plt. rcParams ['axes.unicode_minus' ] = False
+df =pd. read_csv(r"C:\Users\周俊杰\Desktop\帮大忙了GPT\三上\统计学\data\chap02\example2_4.csv", encoding='gbk')
+sns. set_style ('darkgrid')
+sns.pairplot(df[['总股本','每股收益','每股净资产','每股现金流量']],
+height=2,
+diag_kind='hist',
+kind='scatter')
+sns.pairplot(df[['总股本','每股收益','每股净资产','每股现金流量']],
+height=2,
+diag_kind='kde',
+markers='.',
+kind='reg' )
